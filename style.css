@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #fff8f2;
+  color: #333;
+}
+header {
+  background-color: #427a35;
+  color: white;
+  padding: 15px 0;
+  position: relative;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  width: 60px;
+  height: auto;
+
+}
+
+.container-header h1 {
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+.menu {
+  list-style: none;/* remove as bolinhas ou números que aparecem por padrão em listas (<ul> ou <ol>).*/
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;/*negrito*/
+  font-size: 1.1em;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px 0px;
+  text-align: center;
+  
+}
+main h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #3c3838;
+  font-weight: 300;
+}
+
+/**************fim header*****************************************/
+
+/*banner*/
+.banner-topo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/*fim banner*/
+
+/******************distribuição imagens produtos*******************************/
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);/*4 colunas*/
+  gap: 30px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.produtos-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);/*3 colunas */
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.produto {
+  text-align: center;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2em;
+  color: #427a35;
+}
+
+.produto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/*************************************************************/
+
+/************* contato ***********/
+.contato {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contato h2 {
+  color: #427a35;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+/* Layout lado a lado */
+.contato-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+form.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  text-align: left;
+}
+
+form.formulario input,
+form.formulario textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #f5f5f5;
+  resize: vertical;
+}
+
+form.formulario button {
+  background-color: #427a35;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.1em;
+}
+
+form.formulario button:hover {
+  background-color: #365f2b;
+}
+
+/* Informações de contato à direita */
+.info-contato {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.info-contato h3 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+.icones-redes a {
+  font-size: 2em;
+  margin: 0 10px;
+  color: #427a35;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.icones-redes a:hover {
+  color: #2d5523;
+}
+
+.info-contato p {
+  margin-top: 15px;
+  font-size: 1em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contato-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario,
+  .info-contato {
+    max-width: 90%;
+  }
+}
+
+.icones-redes {
+  display: flex;
+  flex-direction: column; /* organiza em coluna */
+  align-items: center; /* centraliza na horizontal */
+  gap: 10px; /* espaço entre os ícones */
+}
+
+.icones-redes a {
+  font-size: 30px; /* tamanho dos ícones */
+  color: #2b00ff; 
+  text-decoration: none;
+}
+
+.icones-redes a:hover {
+  color: #5314ff; /* cor ao passar o mouse */
+}
+/******************************fim form.************************/
+
+/*********footer***************/
+footer {
+  background-color: #427a35;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/*******************************/
+
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/*****************************************/
+
+
+.imagem-principal {
+  width: 200px; /* ou o tamanho que desejar */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imagem-principal:hover {
+  transform: scale(1.05);
+}
+
+/******************************área sobre****************/
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  flex-wrap: wrap;  /*permite quebrar para linha de baixo em telas pequenas*/
+  gap: 20px;
+}
+
+.texto-sobre { 
+  min-width: 180px;
+  max-width: 200px;
+}
+
+.imagem-sobre {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  min-width: 280px;
+  border-radius: 8px;
+}
+.imagem-sobre {
+  max-width: 25%;    /* Ocupa até 40% do espaço horizontal */
+  height: auto;
+}
+
+.texto-sobre {
+  flex: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-sobre {
+    text-align: justify;
+    padding: 15px;
+  }
+
+  .imagem-sobre {
+    max-width: 90%;
+  }
+}
+/*************************fim sobre****************************************/
+
+/******************index**********************/
+.bloco-conteudo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card p {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+.img-categoria{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.img-categoria:hover {
+  transform: scale(1.1); /* aumenta levemente */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* sombra suave */
+}
+/*****************************************************************/
+
